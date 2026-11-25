@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Exigir_Contato_Para_Qualificar</fullName>
+    <active>true</active>
+    <description>Exige e-mail ou telefone preenchido antes de qualificar o Lead.</description>
+    <errorConditionFormula>AND(
+    ISPICKVAL(Status, "Working - Contacted"),
+    ISBLANK(Email),
+    ISBLANK(Phone)
+)</errorConditionFormula>
+    <errorMessage>Preencha pelo menos o E-mail ou o Telefone antes de avançar o status do Lead.</errorMessage>
+</ValidationRule>

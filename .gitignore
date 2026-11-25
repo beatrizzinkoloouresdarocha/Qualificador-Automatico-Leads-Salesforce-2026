@@ -1,0 +1,7 @@
+﻿.sf/
+.sfdx/
+.localdevserver/
+.vscode/
+coverage/
+*.log
+.DS_Store
